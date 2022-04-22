@@ -4,12 +4,12 @@ list1 = json.load(f)
 f = open('list2.json')
 list2 = json.load(f)
 
-commonf = []
+commonfollowers = []
 for i in list1:
     for j in list2:
         if i in j:
             usernames = print(i)
-            commonf.append(usernames)
+            commonfollowers.append(usernames)
 
 with open('commonlist.json', 'w') as f:
-    json.dump(commonf, f)
+    json.dump(commonfollowers, f)
